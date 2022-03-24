@@ -32,7 +32,7 @@ CC="cc -mavx2" pip install -U --force-reinstall pillow-simd
 ```
 
 # Commands
-Here below you can find a few example commands for running our code. The bash scripts with full training configurations for our continual and linear evaluation experiments can be found in the `bash_files` folder. Use our `job_launcher.py` to launch continual self-supervised learning experiments. You can pass the desired configuration for your job (bash script, data directory, number of GPUs, etc...).
+Here below you can find a few example commands for running our code. The bash scripts with full training configurations for our continual and linear evaluation experiments can be found in the `bash_files` folder. Use our `job_launcher.py` to launch continual self-supervised learning experiments. We also provide example code for launching jobs with SLURM where you can pass the desired configuration for your job (bash script, data directory, number of GPUs, walltime, etc...).
 
 NOTE: each experiment uses a different number of gpus (1 for CIFAR100, 2 for ImageNet100 and 4 for DomainNet). You can change this setting directly in the bash scripts.
 
