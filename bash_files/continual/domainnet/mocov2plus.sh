@@ -1,0 +1,38 @@
+python3 main_continual.py \
+    --dataset domainnet \
+    --encoder resnet18 \
+    --data_dir $DATA_DIR/domainnet \
+    --split_strategy domain \
+    --max_epochs 200 \
+    --num_tasks 6 \
+    --task_idx 0 \
+    --gpus 0,1,2,3 \
+    --accelerator ddp \
+    --sync_batchnorm \
+    --num_workers 5 \
+    --precision 16 \
+    --optimizer sgd \
+    --scheduler cosine \
+    --lr 0.4 \
+    --classifier_lr 0.3 \
+    --weight_decay 1e-4 \
+    --batch_size 64 \
+    --brightness 0.4 \
+    --contrast 0.4 \
+    --saturation 0.4 \
+    --hue 0.1 \
+    --dali \
+    --name mocov2plus-domainnet \
+    --project ever-learn \
+    --entity unitn-mhug \
+    --wandb \
+    --save_checkpoint \
+    --method mocov2plus \
+    --proj_hidden_dim 2048 \
+    --queue_size 65536 \
+    --temperature 0.2 \
+    --base_tau_momentum 0.99 \
+    --final_tau_momentum 0.999 \
+    --momentum_classifier \
+    --check_val_every_n_epoch 9999 \
+    --disable_knn_eval

@@ -1,0 +1,37 @@
+python3 main_continual.py \
+    --dataset domainnet \
+    --encoder resnet18 \
+    --data_dir $DATA_DIR/domainnet \
+    --split_strategy domain \
+    --max_epochs 200 \
+    --num_tasks 6 \
+    --task_idx 0 \
+    --gpus 0,1,2,3 \
+    --accelerator ddp \
+    --sync_batchnorm \
+    --num_workers 5 \
+    --precision 16 \
+    --optimizer sgd \
+    --lars \
+    --grad_clip_lars \
+    --eta_lars 0.02 \
+    --exclude_bias_n_norm \
+    --scheduler warmup_cosine \
+    --lr 0.4 \
+    --weight_decay 1e-4 \
+    --batch_size 64 \
+    --brightness 0.8 \
+    --contrast 0.8 \
+    --saturation 0.8 \
+    --hue 0.2 \
+    --dali \
+    --name simclr-domainnet \
+    --wandb \
+    --save_checkpoint \
+    --entity unitn-mhug \
+    --project ever-learn \
+    --method simclr \
+    --temperature 0.2 \
+    --proj_hidden_dim 2048 \
+    --check_val_every_n_epoch 9999 \
+    --disable_knn_eval
