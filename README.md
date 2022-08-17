@@ -40,7 +40,7 @@ NOTE: each experiment uses a different number of gpus (1 for CIFAR100, 2 for Ima
 ### CIFAR100
 E.g. running Barlow Twins:
 ```
-DATA_DIR=/path/to/data/dir/ CUDA_VISIBLE_DEVICES=0 python job_launcher.py --script bash_files/continual/cifar/barlow_distill.sh
+DATA_DIR=/path/to/data/dir/ CUDA_VISIBLE_DEVICES=0 python job_launcher.py --script bash_files/continual/cifar/barlow.sh
 ```
 ### ImageNet100
 #### Class-incremental
