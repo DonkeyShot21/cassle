@@ -5,7 +5,7 @@ python3 main_continual.py \
     --split_strategy class \
     --max_epochs 500 \
     --num_tasks 5 \
-    --task_idx 0 \
+    --task_idx 1 \
     --gpus 0 \
     --num_workers 4 \
     --precision 16 \
